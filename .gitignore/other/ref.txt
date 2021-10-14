@@ -1,0 +1,14 @@
+To activate env
+
+>>  env\Scripts\activate.bat
+
+runserver
+
+>> python manage.py runserver
+
+git remote add origin https://github.com/apxxxva784/Small-Basket.git
+SECRET_KEY = 'django-insecure-oi3s*ddhm6o)!izj6t&%+jsb*p17w(3n1k@h-hfwho&s=r6*6+'
+
+
+
+https://saralgyaan.com/posts/best-way-to-start-a-django-project-with-github-integration/
