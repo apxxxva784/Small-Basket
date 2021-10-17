@@ -2,14 +2,14 @@ body{
     background-color: rgba(248, 231, 210, 0.993);
 }
 
-  .overlay {
+.overlay {
     background-color: rgba(0, 0, 0, 0.7);
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     
-  }
+}
 
 #cover
 {
@@ -34,7 +34,7 @@ body{
 
 .welcome h1
 {
-    font-family: Helvetica, sans-serif, Arial;
+    font-family: 'Merriweather', serif;
     font-weight: lighter;
     color: beige;
     letter-spacing: 2px;
@@ -42,7 +42,7 @@ body{
 }
 
 .welcome p{
-    font-family: Helvetica, sans-serif, Arial;
+    font-family: 'Raleway', sans-serif;
     font-weight: lighter;
     color: beige;
     font-size: 100%;
@@ -59,24 +59,30 @@ body{
     position: absolute;
     top: 75%;
     left: 75%;
+    right: -20%;
     transform: translate(-75%, -75%);
+    border-spacing: 20px;
+    font-family: 'Raleway', sans-serif;
 }
 
 .services table{
- 
-  border-spacing: 20px;
+    width: 100%;
+    border-spacing: 20px;
 }
 
 .services p{
-    text-align: left;
+    text-align: justify;
+    font-family: 'Raleway', sans-serif;
+    
 }
 
-.services table td{
-    text-align:left;
-    width: 50px;
+.services td{
+    text-align:center;
+    margin-left: 15px;
+    width: 100px;
     overflow: hidden;
     display: inline-block;
-    white-space: nowrap;
+    white-space: normal;
    
 }
 
@@ -96,7 +102,7 @@ body{
     color: black;
     margin:5% auto 0 auto;
     text-align: center;
-    font-family: Helvetica, sans-serif, Arial;
+    font-family: 'Merriweather', serif, 'Raleway', sans-serif;
     
     letter-spacing: 2px;
     font-size: 200%;
@@ -104,6 +110,7 @@ body{
 
 .categories table{
     margin: 2% auto ;
+    font-family: 'Raleway', sans-serif;
 }
 
 .categories img{
