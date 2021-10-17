@@ -13,7 +13,7 @@ body{
 
 #cover
 {
-    background-image: url('cover.jpg');
+    background-image: url('img/cover.jpg');
     height: 100%; 
     margin: 0%;
     background-position: center;
@@ -127,11 +127,11 @@ body{
 
 .categories a{
     text-decoration: none;
+    color: black;
 }
 
 .categories td:link,
 a:visited{
-    color: black;
     background-color: inherit;
     transition: background-color 0.2s;
 }
