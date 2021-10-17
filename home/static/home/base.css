@@ -1,0 +1,47 @@
+body, html {
+    height: 100%;
+    margin: 0%;
+    font-size:20px;
+  }
+
+.topnav {
+    overflow: hidden;
+    background-image: linear-gradient(rgb(0,0,0,0.7), rgb(0,0,0,0.7));
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%;
+    z-index: 1;
+    height: 7.5%;
+    color: white;
+  }
+  
+.topnav img{
+    height: 90%;
+    width: auto;
+   
+}
+
+  .topnav a {
+    display: block;
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    width: 7.5%;
+    height: 100%;
+    padding: 1%;
+    text-decoration: none;
+    font-size: 85%;
+  }
+  
+  .topnav a:link,
+  a:visited {
+      background-color: inherit;
+      transition: background-color 0.2s;
+      color: white;
+  }
+  
+  .topnav a:hover,
+  a:active {
+    background-color: whitesmoke;
+    color: black;
+  }

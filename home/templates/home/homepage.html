@@ -1,0 +1,113 @@
+{%extends "home/base.html"%}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'home/homepage.css' %}">
+{% endblock css %}
+{%block body%}
+    <div id="cover">
+        <div class="overlay"></div>
+        <div class="welcome">
+            <h1>Welcome to Small Basket</h1>
+            <p>Delivering all your grocery needs with utmost care</p>
+        </div>
+        <table class="services">
+            <tr>
+                <td>
+                    <img src="{% static 'home/delivery.png'%}">
+                </td>
+                <td>
+                    <img src="{% static 'home/savings.png'%}">
+                </td>
+                <td>
+                    <img src="{% static 'home/cod.png'%}">
+                </td>
+                <td>
+                    <img src="{% static 'home/subscribe.png'%}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Free One Day Delivery</h3>
+                    <p>Order online and get your groceries delivered by the next day</p>
+                </td>
+                <td>
+                    <h3>20% Discount</h3>
+                    <p>Avail 20% discount on your first order delivery</p>
+                </td>
+                <td>
+                    <h3>COD</h3>
+                    <p>Cash-On-Delivery Payment mode available</p>
+                </td>
+                <td>
+                    <h3>Small Basket Subscription</h3>
+                    <p>Save more and get scheduled deliveries with our Small Basket Subscription</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="categories">
+        <h1>Categories</h1>
+        <table>
+            <tr>
+                <td>
+                    <a href="">
+                        <img src="{% static 'home/fruits.png' %}"/>
+                        <p>Fruits</p>
+                    </a>
+                </td>
+                <td>
+                    <a href="">
+                        <img src="{% static 'home/vegetable.png' %}"/>
+                        <p>Vegetables</p>
+                    </a>
+                </td>
+                <td>
+                    <a>
+                        <img src="{% static 'home/dairy.png' %}"/>
+                        <p>Dairy</p>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a>
+                        <img src="{% static 'home/barbecue.png' %}"/>
+                        <p>Meats and Seafood</p>
+                    </a>
+                </td>
+                <td>
+                    <a>
+                        <img src="{% static 'home/wheat-sack.png' %}"/>
+                        <p>Grains and Staples</p>
+                    </a>
+                </td>
+                <td>
+                    <a>
+                        <img src="{% static 'home/platter.png' %}"/>
+                        <p>Luxury Items</p>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a>
+                        <img src="{% static 'home/bread.png' %}"/>
+                        <p>Baked Goods</p>
+                    </a>
+                </td>
+                <td>
+                    <a>
+                        <img src="{% static 'home/snack.png' %}"/>
+                        <p>Snacks and Beverages</p>
+                    </a>
+                </td>
+                <td>
+                    <a>
+                        <img src="{% static 'home/frozen-food.png' %}"/>
+                        <p>Frozen Foods</p>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+{%endblock body%}

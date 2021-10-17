@@ -1,0 +1,22 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Small Basket</title>
+        <link rel="stylesheet" href="{% static 'home/grid.css' %}">
+        <link rel="stylesheet" href="{% static 'home/base.css' %}">
+        <link rel="stylesheet" href="{% static 'home/normalize.css' %}">
+        {%block css%}{%endblock%}
+    </head>
+    <body>
+        <div class="topnav">
+            <img src="{% static 'home/logo.png' %}">
+            <a class="topnav-bt" id="sign-in" href="#home">Sign In</a>
+            <a class="topnav-bt" href="#home">Cart</a>
+            <a class="topnav-bt" href="#home">Home</a>
+            
+            
+          </div>
+        {%block body%}{%endblock%}
+    </body>
+</html>
