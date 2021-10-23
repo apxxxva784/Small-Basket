@@ -103,7 +103,6 @@ body{
     margin:5% auto 0 auto;
     text-align: center;
     font-family: 'Merriweather', serif, 'Raleway', sans-serif;
-    
     letter-spacing: 2px;
     font-size: 200%;
 }
@@ -140,3 +139,5 @@ a:visited{
 a:active{
     background-color: rgb(248, 237, 221);
 }
+
+
