@@ -2,6 +2,8 @@ To activate env
 
 >>  env\Scripts\activate.bat
 
+apoorva@PC-Apoorva:~/Documents$ source ./env/bin/activate
+
 runserver
 
 >> python manage.py runserver
