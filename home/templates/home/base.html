@@ -16,13 +16,28 @@
     </head>
     <body>
         <div class="topnav">
-            <img src="{% static 'home/img/logo.png' %}">
-            <a class="topnav-bt" id="sign-in" href="#home">Sign In</a>
-            <a class="topnav-bt" href="#home">Cart</a>
-            <a class="topnav-bt" href="#home">Home</a>
+            <a id="topnav-left" href="#home"><img src="{% static 'home/img/logo.png' %}"></a>
+            {% block nav_menu %}
+            {% if user.is_authenticated %}
+                <div class="dropdown">
+                    <a class="topnav-bt" href="#">Hi, {{ user.username|safe }} </i></a>
+                    <div class="dropdown-content">
+                        <a href="#" onClick="document.getElementById('logoutform').submit()"> Logout </a>
+                        <a href="#home">My Cart</a>
+                        <form id = "logoutform" action="{% url 'accounts:logout' %}" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden">
+                        </form>
+                    </div>
+                </div>
+                
+            {% else %}
+                <a class="topnav-bt" id="sign-in" href="/accounts/login">Sign In</a>
+            {% endif %}
+
             
-            
-          </div>
+            {%endblock%}
+        </div>
         {%block body%}{%endblock%}
     </body>
 </html>
