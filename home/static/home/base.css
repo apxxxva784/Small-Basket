@@ -14,6 +14,8 @@ body, html {
     z-index: 1;
     height: 7.5%;
     color: white;
+    font-size:20px;
+    font-family:  'Merriweather', serif;
   }
   
 #topnav-left img{
@@ -44,8 +46,7 @@ a.topnav-bt{
       color: white;
   }
   
-.topnav a:hover,
-  a:active {
+.topnav a:hover{
     background-color: whitesmoke;
     color: black;
   }
@@ -72,16 +73,16 @@ a.topnav-bt{
     display: none;
     position: fixed;
     top:7.5%;
-    background-color: #f9f9f9;
+    background-color: #020202;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     
 }
   
-.dropdown-content a {
+.dropdown-content a, a:visited {
     float: none;
-    color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -90,7 +91,7 @@ a.topnav-bt{
 }
   
   /* Add a grey background color to dropdown links on hover */
-  .dropdown-content a:hover {
+  .dropdown-content a:hover{
     background-color: #ddd;
   }
   
