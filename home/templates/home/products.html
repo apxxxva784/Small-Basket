@@ -5,4 +5,11 @@
 {% endblock css %}
 {%block body%}
     
+    <h1>{{selected_category}}</h1>
+    {%for product in products%}
+     {%if product.category.name == selected_category %} 
+     <p>{{product.p_name}}</p>
+     {%endif%} 
+     {% endfor %}
+    
 {%endblock body%}

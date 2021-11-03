@@ -82,12 +82,11 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'small_basket',
-        'USER': 'apoorva',
-        'PASSWORD': '',
+        'USER': 'ayushi',
+        'PASSWORD': '123456',
         'HOST': 'localhost',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
