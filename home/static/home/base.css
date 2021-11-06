@@ -14,13 +14,10 @@ body, html {
     width: 100%;
     z-index: 1;
     height: 7.5%;
-<<<<<<< HEAD
     
-=======
     color: white;
     font-size:20px;
     font-family:  'Merriweather', serif;
->>>>>>> refs/remotes/origin/master
   }
   
 #topnav-left img{

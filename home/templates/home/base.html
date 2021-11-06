@@ -17,15 +17,6 @@
     
     <body>
         <div class="topnav">
-<<<<<<< HEAD
-            <img src="{% static 'home/img/logo.png' %}">
-            <a class="topnav-bt" id="sign-in" href="#home">Sign In</a>
-            <a class="topnav-bt" href="">Cart</a>
-            <a class="topnav-bt" href="{%url 'home'  %}">Home</a>
-            
-            
-          </div>
-=======
             <a id="topnav-left" href="{% url 'home:home' %}"><img src="{% static 'home/img/logo.png' %}"></a>
             {% block nav_menu %}
             {% if user.is_authenticated %}
@@ -46,7 +37,6 @@
             {% endif %}
             {%endblock%}
         </div>
->>>>>>> refs/remotes/origin/master
         {%block body%}{%endblock%}
     </body>
 </html>

@@ -7,9 +7,29 @@
     
     <h1>{{selected_category}}</h1>
     {%for product in products%}
-     {%if product.category.name == selected_category %} 
-     <p>{{product.p_name}}</p>
-     {%endif%} 
-     {% endfor %}
+        {%if product.category.name == selected_category %} 
+            <div class="product row">
+                <div class="col span_1_of_5 product-img">
+                    <img src={{product.image}}>
+                </div>
+                <div class="col span_3_of_5 product-info">
+                    <h1>{{product.p_name}}</h1>
+                    <form>
+                        <p>Subscribe</p>
+                        <input type="radio" class="weekly-subscription" name="subscribe" value="weekly-subscription">
+                        <label for="weekly-subscription">Weekly- Save 10%</label><br>
+                        <input type="radio" class="monthly-subscription" name="subscribe" value="monthly-subscription">
+                        <label for="monthly-subscription">Monthly- Save 5%</label><br>
+                    </form>
+                </div>
+                <div class="col span_1_of_5 add-to-cart">
+                    <h1>₹{{product.price}}</h1>
+                    <img src="{% static 'home/img/cart.png'%}">
+                    <p>Add to Cart</p>
+                </div>
+            </div>
+        <!--<p>{{product.p_name}}</p>-->
+        {%endif%} 
+    {% endfor %}
     
 {%endblock body%}
