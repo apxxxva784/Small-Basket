@@ -83,8 +83,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'small_basket',
-        'USER': 'ayushi',
-        'PASSWORD': '123456',
+        'USER': 'apoorva',
+        'PASSWORD': 'pass123',
         'HOST': 'localhost',
     }
 }
