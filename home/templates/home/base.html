@@ -24,7 +24,7 @@
                     <a class="topnav-bt" href="#">Hi, {{ user.username|safe }} </i></a>
                     <div class="dropdown-content">
                         <a href="#" onClick="document.getElementById('logoutform').submit()"> Logout </a>
-                        <a href="#home">My Cart</a>
+                        <a href="{% url 'home:cart' %}">My Cart</a>
                         <form id = "logoutform" action="{% url 'accounts:logout' %}" method="POST">
                             {% csrf_token %}
                             <input type="hidden">
