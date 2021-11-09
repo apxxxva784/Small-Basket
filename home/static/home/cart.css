@@ -1,0 +1,47 @@
+.not_available{
+    color: red;
+
+}
+
+#default{
+    text-decoration: none;
+    color: black
+}
+p.yeet{
+    text-align: center;
+}
+
+img.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+span{
+    font-size: 30;
+}
+
+svg {
+    width: 1rem;
+    cursor: pointer; 
+    align-content: center;
+
+}
+
+svg:hover {
+    color: #F0BF3C; }
+svg.disabled {
+    color: #999;
+    cursor: not-allowed !important;
+    pointer-events: none; }
+
+
+.checkout_btn_div{
+    align-content: center;
+    translate: (0% 0% 50% 50%);
+}
+
+.checkout_btn{
+
+    margin-left: 47%;
+}

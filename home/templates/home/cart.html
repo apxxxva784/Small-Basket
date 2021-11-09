@@ -2,6 +2,52 @@
 {% load static %}
 {% block css %}
     <link rel="stylesheet" href="{% static 'home/cart.css' %}">
+    <link rel="stylesheet" href="{% static 'home/products.css' %}">
 {% endblock css %}
 {%block body%}
+<h1>My Cart</h1>
+{% if list %}
+{% for item in cartitem %}
+    {% if item.cart.id == cart.id and item.quantity > 0 %}
+        <div class="product row">
+            <div class="col span_1_of_5 product-img">
+                <img src={{item.product.image}}>
+            </div>
+            <div class="col span_3_of_5 product-info">
+                <h1>{{item.product.p_name}}</h1>  
+                    <br>
+                  <p>Qty: {{ item.quantity }} </p>
+                  
+            </div>  
+            <div class="col span_1_of_5 ">
+                    <h1>₹{{item.price }}</h1>
+                    <br>
+                  <div>
+                    <button data-id="{{ item.product.p_id }}" class="delete_btn">Delete</button>
+                  </div>
+            
+            </div>
+        </div>
+    
+<div class="sub_total">
+    <h1>Total(): ₹{{ cart.total }}</h1>
+  </div>
+  <div class="checkout_btn_div" >
+        <form action="" method="GET">
+        <button type="submit" class="checkout_btn">Checkout</button>
+        </form>
+  </div>
+</div>
+
+{% endif %}
+{% endfor %}
+{% else %}
+<img class="center" src="https://cdn-icons-png.flaticon.com/512/102/102661.png"></img>  
+<br>
+<p class="yeet">
+    Your cart is empty! Click <a id="default" href="{% url  'home:home' %}"> here </a> to continue shopping. 
+</p>
+{%endif%}
+
 {%endblock body%}
+

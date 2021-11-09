@@ -36,7 +36,7 @@ body{
    
 }
 
-.welcome h1
+.welcome h1, h2, h3
 {
     font-family: 'Merriweather', serif;
     font-weight: lighter;
