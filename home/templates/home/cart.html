@@ -28,19 +28,21 @@
             
             </div>
         </div>
+
+        {% endif %}
+        {% endfor %}
     
 <div class="sub_total">
     <h1>Total(): ₹{{ cart.total }}</h1>
   </div>
   <div class="checkout_btn_div" >
-        <form action="" method="GET">
+        <form action="{% url 'home:checkout'%}" method="GET">
         <button type="submit" class="checkout_btn">Checkout</button>
         </form>
   </div>
 </div>
 
-{% endif %}
-{% endfor %}
+
 {% else %}
 <img class="center" src="https://cdn-icons-png.flaticon.com/512/102/102661.png"></img>  
 <br>
