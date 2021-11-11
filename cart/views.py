@@ -84,7 +84,7 @@ def subscribe(request):
 
             else: #product not in cart
                 new_item = CartItem(product=item, price=6*item.price, quantity=7, cart=cart)
-                cart.total += 6*new_item.price
+                cart.total += new_item.price
                 new_item.save()
                 item.stock -= 7
                 item.save()
