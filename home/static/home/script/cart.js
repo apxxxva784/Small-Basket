@@ -1,6 +1,14 @@
+function showcart(product_id){
+  document.getElementById(product_id).classList.remove("hidden");
+
+}
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const addToCartBtns = document.querySelectorAll('.add_to_cart_btn');
     const deleteBtns = document.querySelectorAll('.delete_btn');
+    const subbtns = document.querySelectorAll('.sub_btn');
 
 
     const getCookie = (name) => {
@@ -42,6 +50,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
+    const subCart = (e) => {
+      let id = e.target.dataset.id;
+
+      const formData = new FormData();
+      formData.append("id", id);
+
+      fetch('/cart/subscribe/', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'X-CSRFToken': csrftoken
+          }
+        })
+        .then(res => res.json())
+      .then(data => {
+        if (data.status === 200) {
+            alert("You must sign in to access this feature!");
+        }
+      });
+  }
     const removeCart = (e, isInCart) => {
         let id = e.target.dataset.id;
   
@@ -58,11 +87,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         };
 
+    
+
     addToCartBtns.forEach((btn) => {
         btn.addEventListener('click', function (e) {
         addToCart(e, false);
+        location.reload();
         })
     });
+
+    subbtns.forEach((btn) => {
+      btn.addEventListener('click', function (e) {
+      subCart(e, false);
+      location.reload();
+      })
+  });
 
     deleteBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {

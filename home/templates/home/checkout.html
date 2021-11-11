@@ -13,13 +13,16 @@
         <div class="overlay"></div>
         <div class="welcome">
             <h1>Checkout</h1>
-            <form action="{% url 'home:home' %}" method="get">
+            <form action="{% url 'home:placeorder' %}" method="get">
     
                 <h3> Your Total is: </h3>
                 <h2> {{cart.total}}</h2>
+                <div class = "prompter">
+                Please Note that only Cash-on-delivery Payment Option is available
+                </div>
                 <br>
                 <div id="submitbtn" class="text-center">
-                    <button action="{% url 'home:home' %}" class="btn btn-secondary mx-auto" type="submit">Complete Payment</button>
+                    <button class="btn btn-secondary mx-auto" type="submit">Place Order</button>
                 </div>
             </form>
 

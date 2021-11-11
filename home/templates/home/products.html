@@ -14,13 +14,15 @@
                 </div>
                 <div class="col span_3_of_5 product-info">
                     <h1>{{product.p_name}}</h1>
-                    <form>
-                        <p>Subscribe</p>
-                        <input type="radio" class="weekly-subscription" name="subscribe" value="weekly-subscription">
-                        <label for="weekly-subscription">Weekly- Save 10%</label><br>
-                        <input type="radio" class="monthly-subscription" name="subscribe" value="monthly-subscription">
-                        <label for="monthly-subscription">Monthly- Save 5%</label><br>
-                    </form>
+                    <br>
+                    <button method="POST" onclick="showcart('{{ product.p_id }}')" data-id="{{ product.p_id }}" action="{% url 'cart:subscribe' %}" class="sub_btn" type="submit">
+                        Subscribe
+                    </button>
+                    <br>
+                    <br>
+                        <label >Weekly Subscription- Save upto 10%</label><br>
+                        <label>Pre-place an order for delivery for an entire week and get an immediate discount of upto 10%</label><br>
+
                 </div>
                 <div class="col span_1_of_5 add-to-cart">
                     <h1>₹{{product.price}}</h1>
@@ -28,14 +30,25 @@
                     <div class="buttons">
                         <img src="{% static 'home/img/cart.png'%}">
                         {% if product.stock > 0 %}
-                        <button method="POST" data-id="{{ product.p_id }}" action="{% url 'cart:add_to_cart' %}" class="add_to_cart_btn" type="submit">
+                        <button method="POST" onclick="showcart('{{ product.p_id }}')" data-id="{{ product.p_id }}" action="{% url 'cart:add_to_cart' %}" class="add_to_cart_btn" type="submit">
                           Add to Cart
-                        </button>
+                        </button><br>
+                        
                         {% else %}
                         <button disabled data-id="{{ product.p_id }}" class="add_to_cart_btn">
                           Add to Cart
                         </button>
+                        
                         {% endif %}
+                        <div class="inCart hidden" id="{{product.p_id}}">
+                            {%for item in items%}
+                                {% if item.product.p_id == product.p_id %}
+                                    <br>
+                                    <p >In Cart : {{ item.quantity}} </p>
+                                {% endif %} 
+                            {%endfor%}
+
+                        </div>
                     </div>
 
                 </div>
